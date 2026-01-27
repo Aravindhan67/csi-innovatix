@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Logic | CSI Innovatix '26</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .event-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(to bottom, rgba(37, 99, 235, 0.1), transparent);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .rule-list {
+            margin-top: 1.5rem;
+        }
+
+        .rule-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .rule-list i {
+            color: var(--secondary);
+            margin-top: 0.3rem;
+        }
+
+        @media (max-width: 768px) {
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Institution Header -->
+    <div class="inst-header">
+        <div class="container inst-content">
+            <img src="csi_logo.png" alt="KEC Logo" class="inst-logo">
+            <div class="inst-text">
+                <h2>Kongu Engineering College</h2>
+                <p>Computer Society of India</p>
+            </div>
+            <img src="csi%20logo2.png" alt="CSI Logo" class="inst-logo">
+        </div>
+    </div>
+
+    <nav id="navbar" class="scrolled">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">INNOVATIX '26</a>
+            <a href="index.html#events" class="btn btn-outline">Back to Events</a>
+        </div>
+    </nav>
+
+    <header class="event-hero">
+        <div class="container">
+            <a href="index.html#events" class="back-link"><i class="fas fa-arrow-left"></i> Back to all events</a>
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Visual Logic: <span style="color: var(--primary);">The
+                    Pure CSS Game Jam</span></h1>
+            <p style="font-size: 1.25rem; color: var(--text-muted);">A competitive coding challenge where developers
+                push the boundaries of front-end creativity.</p>
+        </div>
+    </header>
+
+    <section style="padding: 60px 0;">
+        <div class="container detail-grid">
+            <div class="reveal active">
+                <h2 style="margin-bottom: 1.5rem;">About the Event</h2>
+                <p style="margin-bottom: 1.5rem;">"Visual Logic" is a 60-minute competitive coding challenge where
+                    developers push the boundaries of front-end creativity by building fully playable, interactive games
+                    using only HTML and CSS—absolutely no JavaScript allowed.</p>
+
+                <h3 style="margin-bottom: 1rem; color: var(--secondary);">Event Flow</h3>
+                <ul class="rule-list">
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Theme Reveal:</strong> The event kicks off
+                            with the reveal of a simple game theme (such as "Memory Match" or "Slide Puzzle").</span>
+                    </li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Prototyping (45 mins):</strong> Participants
+                            rely solely on advanced CSS selectors, animations, and clever HTML structures to craft their
+                            games.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Judging (10 mins):</strong> The final minutes
+                            are dedicated to playtesting and judging.</span></li>
+                </ul>
+
+                <h3 style="margin-bottom: 1rem; color: var(--accent); margin-top: 2rem;">Judging Criteria</h3>
+                <p>Winners are recognized for creativity, visual polish, and ingenious use of pure CSS to achieve
+                    interactivity and fun.</p>
+            </div>
+
+            <aside class="reveal active">
+                <div class="glass" style="padding: 2rem; position: sticky; top: 120px;">
+                    <h3 style="margin-bottom: 1.5rem;">Event Info</h3>
+                    <ul style="margin-bottom: 2rem;">
+                        <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
+                            <span style="color: var(--text-muted);">Duration</span>
+                            <span style="font-weight: 600;">60 Minutes</span>
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
+                            <span style="color: var(--text-muted);">Team Size</span>
+                            <span style="font-weight: 600;">Individual or 2</span>
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
+                            <span style="color: var(--text-muted);">Category</span>
+                            <span style="font-weight: 600;">Coding</span>
+                        </li>
+                    </ul>
+                    <a href="https://forms.google.com" target="_blank" class="btn btn-primary"
+                        style="width: 100%; justify-content: center;">Register for this Event</a>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; INNOVATIX '26. All Rights Reserved</p>
+            <p class="footer-made-by">Made with <i class="fas fa-heart"></i> by <a
+                    href="https://www.instagram.com/aravindhan_67" target="_blank">Aravindhan</a></p>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/aravindhan_67" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

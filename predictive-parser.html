@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Predictive Parser | CSI Innovatix '26</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .event-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(to bottom, rgba(239, 68, 68, 0.1), transparent);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: #ef4444;
+            font-weight: 600;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .rule-list {
+            margin-top: 1.5rem;
+        }
+
+        .rule-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .rule-list i {
+            color: #ef4444;
+            margin-top: 0.3rem;
+        }
+
+        @media (max-width: 768px) {
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Institution Header -->
+    <div class="inst-header">
+        <div class="container inst-content">
+            <img src="csi_logo.png" alt="KEC Logo" class="inst-logo">
+            <div class="inst-text">
+                <h2>Kongu Engineering College</h2>
+                <p>Computer Society of India</p>
+            </div>
+            <img src="csi%20logo2.png" alt="CSI Logo" class="inst-logo">
+        </div>
+    </div>
+
+    <nav id="navbar" class="scrolled">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">INNOVATIX '26</a>
+            <a href="index.html#events" class="btn btn-outline">Back to Events</a>
+        </div>
+    </nav>
+
+    <header class="event-hero">
+        <div class="container">
+            <a href="index.html#events" class="back-link"><i class="fas fa-arrow-left"></i> Back to all events</a>
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">The <span style="color: #ef4444;">Predictive</span>
+                Parser</h1>
+            <p style="font-size: 1.25rem; color: var(--text-muted);">The ultimate battle of wits and code intuition.
+                Decode logic before the clock runs out.</p>
+        </div>
+    </header>
+
+    <section style="padding: 60px 0;">
+        <div class="container detail-grid">
+            <div class="reveal active">
+                <h2 style="margin-bottom: 1.5rem;">About the Event</h2>
+                <p style="margin-bottom: 1.5rem;">Welcome to the ultimate battle of wits and code intuition! "The
+                    Predictive Parser" is a two-stage mental sprint where your ability to read and understand code
+                    without a compiler is put to the test.</p>
+
+                <h3 style="margin-bottom: 1rem; color: #ef4444;">Event Stages</h3>
+                <ul class="rule-list">
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Round 1: Rapid-Fire Quiz:</strong> Tackle tech
+                            trivia in an intense online quiz format.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Round 2: Output Prediction:</strong> Top
+                            performers advance to analyze real code snippets and forecast results—without running a
+                            single line.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Under Pressure:</strong> It's not just what
+                            you know, but how you think under the ticking clock.</span></li>
+                </ul>
+
+                <h3 style="margin-bottom: 1rem; color: var(--accent); margin-top: 2rem;">Core Skills</h3>
+                <p>Logic decoding, language-specific syntax knowledge, algorithmic thinking, and speed.</p>
+            </div>
+
+            <aside class="reveal active">
+                <div class="glass" style="padding: 2rem; position: sticky; top: 120px;">
+                    <h3 style="margin-bottom: 1.5rem;">Event Info</h3>
+                    <ul style="margin-bottom: 2rem;">
+                        <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
+                            <span style="color: var(--text-muted);">Duration</span>
+                            <span style="font-weight: 600;">2 Rounds</span>
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
+                            <span style="color: var(--text-muted);">Team Size</span>
+                            <span style="font-weight: 600;">Individual</span>
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
+                            <span style="color: var(--text-muted);">Category</span>
+                            <span style="font-weight: 600;">Logic & Trivia</span>
+                        </li>
+                    </ul>
+                    <a href="https://forms.google.com" target="_blank" class="btn btn-primary"
+                        style="width: 100%; justify-content: center; background: linear-gradient(135deg, #ef4444, #dc2626);">Register
+                        for this Event</a>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; INNOVATIX '26. All Rights Reserved</p>
+            <p class="footer-made-by">Made with <i class="fas fa-heart"></i> by <a
+                    href="https://www.instagram.com/aravindhan_67" target="_blank">Aravindhan</a></p>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/aravindhan_67" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

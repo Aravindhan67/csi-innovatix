@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Thesis | CSI Innovatix '26</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .event-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(to bottom, rgba(59, 130, 246, 0.1), transparent);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .rule-list {
+            margin-top: 1.5rem;
+        }
+
+        .rule-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .rule-list i {
+            color: var(--secondary);
+            margin-top: 0.3rem;
+        }
+
+        @media (max-width: 768px) {
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Institution Header -->
+    <div class="inst-header">
+        <div class="container inst-content">
+            <img src="csi_logo.png" alt="KEC Logo" class="inst-logo">
+            <div class="inst-text">
+                <h2>Kongu Engineering College</h2>
+                <p>Computer Society of India</p>
+            </div>
+            <img src="csi%20logo2.png" alt="CSI Logo" class="inst-logo">
+        </div>
+    </div>
+
+    <nav id="navbar" class="scrolled">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">INNOVATIX '26</a>
+            <a href="index.html#events" class="btn btn-outline">Back to Events</a>
+        </div>
+    </nav>
+
+    <header class="event-hero">
+        <div class="container">
+            <a href="index.html#events" class="back-link"><i class="fas fa-arrow-left"></i> Back to all events</a>
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">TECHNICAL <span
+                    style="color: var(--primary);">THESIS</span></h1>
+            <p style="font-size: 1.25rem; color: var(--text-muted);">Where deep research meets visionary presentation.
+                Showcase your impactful tech findings.</p>
+        </div>
+    </header>
+
+    <section style="padding: 60px 0;">
+        <div class="container detail-grid">
+            <div class="reveal active">
+                <h2 style="margin-bottom: 1.5rem;">About the Event</h2>
+                <p style="margin-bottom: 1.5rem;">Welcome to Technical Thesis, your arena to showcase a well-crafted
+                    paper on an impactful tech topic—from AI ethics to sustainable systems, from algorithm breakthroughs
+                    to future-ready infrastructure.</p>
+
+                <h3 style="margin-bottom: 1rem; color: var(--secondary);">Why Participate?</h3>
+                <ul class="rule-list">
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Thought Leadership:</strong> Present your
+                            findings with clarity and defend your insights before an expert panel.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Data Driven:</strong> Bring data to life
+                            through compelling delivery and persuasive storytelling.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Future Focused:</strong> Rigorous analysis
+                            meets the ideas that will shape tomorrow's technology landscape.</span></li>
+                </ul>
+
+                <h3 style="margin-bottom: 1rem; color: var(--accent); margin-top: 2rem;">Topics of Interest</h3>
+                <p>AI Ethics, Sustainable Tech Systems, Cloud Infrastructure, Cyber Security, and Green Computing.</p>
+            </div>
+
+            <aside class="reveal active">
+                <div class="glass" style="padding: 2rem; position: sticky; top: 120px;">
+                    <h3 style="margin-bottom: 1.5rem;">Event Info</h3>
+                    <ul style="margin-bottom: 2rem;">
+                        <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
+                            <span style="color: var(--text-muted);">Duration</span>
+                            <span style="font-weight: 600;">Presentation Slots</span>
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
+                            <span style="color: var(--text-muted);">Team Size</span>
+                            <span style="font-weight: 600;">2 or 3</span>
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
+                            <span style="color: var(--text-muted);">Category</span>
+                            <span style="font-weight: 600;">Research</span>
+                        </li>
+                    </ul>
+                    <a href="https://forms.google.com" target="_blank" class="btn btn-primary"
+                        style="width: 100%; justify-content: center;">Register for this Event</a>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; INNOVATIX '26. All Rights Reserved</p>
+            <p class="footer-made-by">Made with <i class="fas fa-heart"></i> by <a
+                    href="https://www.instagram.com/aravindhan_67" target="_blank">Aravindhan</a></p>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/aravindhan_67" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
