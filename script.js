@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Scroll Reveal Animation
     const revealElements = document.querySelectorAll('.reveal');
-    
+
     const revealOnScroll = () => {
         const triggerBottom = window.innerHeight * 0.85;
-        
+
         revealElements.forEach(el => {
             const elTop = el.getBoundingClientRect().top;
-            
+
             if (elTop < triggerBottom) {
                 el.classList.add('active');
             }
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 window.scrollTo({
@@ -51,4 +51,23 @@ document.addEventListener('DOMContentLoaded', () => {
     eventCards.forEach((card, index) => {
         card.style.transitionDelay = `${index * 0.1}s`;
     });
+
+    // 5. Mobile Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
 });
