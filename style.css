@@ -129,6 +129,12 @@ ul {
     object-fit: contain;
 }
 
+.csi-logo-2 {
+    height: 200px;
+    width: auto;
+    object-fit: contain;
+}
+
 .inst-text {
     text-align: center;
     flex: 1;
@@ -165,7 +171,8 @@ nav {
         text-align: center;
     }
 
-    .inst-logo {
+    .inst-logo,
+    .csi-logo-2 {
         height: 70px;
     }
 
