@@ -253,7 +253,8 @@ nav.scrolled {
 
 @media (max-width: 768px) {
     .hamburger {
-        display: flex;
+        display: none !important;
+        /* Hide hamburger for horizontal menu */
     }
 
     .nav-content .btn-primary {
@@ -262,24 +263,25 @@ nav.scrolled {
     }
 
     .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        height: 100vh;
-        background: rgba(15, 23, 42, 0.95);
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: 100%;
+        height: auto;
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
         justify-content: center;
         align-items: center;
-        transition: 0.5s ease-in-out;
-        z-index: 1000;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        gap: 1.2rem;
+        overflow-x: auto;
+        padding: 0.5rem 0;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
 
-    .nav-links.active {
-        right: 0;
+    .nav-links::-webkit-scrollbar {
+        display: none;
     }
 
     .nav-links li {
