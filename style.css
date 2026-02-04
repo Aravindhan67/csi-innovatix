@@ -166,14 +166,20 @@ nav {
 }
 
 @media (max-width: 768px) {
+    .inst-header {
+        padding: 1.5rem 0;
+    }
+
     .inst-content {
         flex-direction: column;
         text-align: center;
+        gap: 1.5rem;
     }
 
     .inst-logo,
     .csi-logo-2 {
-        height: 70px;
+        height: 60px;
+        /* Reduced for tablet */
     }
 
     .inst-text h2 {
@@ -250,6 +256,11 @@ nav.scrolled {
         display: flex;
     }
 
+    .nav-content .btn-primary {
+        display: none;
+        /* Hide Join Now in navbar on mobile to prevent clutter */
+    }
+
     .nav-links {
         position: fixed;
         top: 0;
@@ -258,6 +269,7 @@ nav.scrolled {
         height: 100vh;
         background: rgba(15, 23, 42, 0.95);
         backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -593,6 +605,12 @@ footer {
         font-size: 1.1rem;
     }
 
+    .inst-logo,
+    .csi-logo-2 {
+        height: 50px;
+        /* Reduced further for mobile */
+    }
+
     .timeline-item {
         flex-direction: column;
         gap: 0.5rem;
@@ -604,6 +622,22 @@ footer {
 
     .contact-item {
         font-size: 1rem;
+    }
+
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        width: 100%;
+        max-width: 300px;
+        margin: 2rem auto 0;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+        justify-content: center;
+        margin: 0 !important;
     }
 }
 
