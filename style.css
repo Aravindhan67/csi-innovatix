@@ -254,12 +254,10 @@ nav.scrolled {
 @media (max-width: 768px) {
     .hamburger {
         display: none !important;
-        /* Hide hamburger for horizontal menu */
     }
 
     .nav-content .btn-primary {
         display: none;
-        /* Hide Join Now in navbar on mobile to prevent clutter */
     }
 
     .nav-links {
@@ -273,11 +271,10 @@ nav.scrolled {
         -webkit-backdrop-filter: none;
         justify-content: center;
         align-items: center;
-        gap: 1.2rem;
+        gap: 1rem;
         overflow-x: auto;
         padding: 0.5rem 0;
         scrollbar-width: none;
-        -ms-overflow-style: none;
     }
 
     .nav-links::-webkit-scrollbar {
@@ -285,12 +282,46 @@ nav.scrolled {
     }
 
     .nav-links li {
-        margin: 1.5rem 0;
+        margin: 0;
     }
 
     .nav-links a {
-        font-size: 1.5rem;
-        font-weight: 600;
+        font-size: 0.9rem;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+
+    .nav-content {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+        white-space: nowrap;
+    }
+
+    .inst-header {
+        padding: 1.5rem 0;
+    }
+
+    .inst-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .inst-logo,
+    .csi-logo-2 {
+        height: 60px;
+    }
+
+    .inst-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .inst-text p {
+        font-size: 0.8rem;
     }
 }
 
@@ -605,6 +636,24 @@ footer {
 
     .inst-text h2 {
         font-size: 1.1rem;
+    }
+
+    .nav-links {
+        gap: 0.8rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    .nav-content {
+        flex-direction: column;
+        gap: 0.5rem;
+        /* Reduced gap */
+    }
+
+    .logo {
+        font-size: 1rem;
     }
 
     .inst-logo,
