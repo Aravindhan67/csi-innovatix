@@ -70,39 +70,5 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
-    // 6. Dynamic Visitor Counter
-    const createVisitorBadge = () => {
-        const badge = document.createElement('div');
-        badge.className = 'visitor-badge glass';
-        badge.innerHTML = `
-            <div class="visitor-pulse" title="Active Statistics" style="background-color: var(--primary);"></div>
-            <span><i class="fas fa-eye" style="margin-right: 5px; color: var(--primary);"></i> <span id="visitor-count">1,000</span> Total Visits</span>
-        `;
-        document.body.appendChild(badge);
-
-        const countEl = document.getElementById('visitor-count');
-
-        // Use localStorage to persist total visits
-        let totalVisits = localStorage.getItem('innovatix_total_visits');
-
-        if (!totalVisits) {
-            // Initial seed value for total visits
-            totalVisits = Math.floor(Math.random() * (1200 - 800 + 1)) + 800;
-        } else {
-            totalVisits = parseInt(totalVisits);
-        }
-
-        // Increment visit only once per session to represent "Total visitors"
-        if (!sessionStorage.getItem('visit_counted')) {
-            totalVisits += 1;
-            localStorage.setItem('innovatix_total_visits', totalVisits);
-            sessionStorage.setItem('visit_counted', 'true');
-        }
-
-        countEl.innerText = totalVisits.toLocaleString();
-    };
-
-    createVisitorBadge();
 });
 
