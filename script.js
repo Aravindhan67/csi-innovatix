@@ -70,4 +70,46 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // 6. Dynamic Visitor Counter
+    const createVisitorBadge = () => {
+        const badge = document.createElement('div');
+        badge.className = 'visitor-badge glass';
+        badge.innerHTML = `
+            <div class="visitor-pulse" title="Live"></div>
+            <span><i class="fas fa-users" style="margin-right: 5px; color: var(--primary);"></i> <span id="visitor-count">124</span> Live Now</span>
+        `;
+        document.body.appendChild(badge);
+
+        const countEl = document.getElementById('visitor-count');
+
+        // Use localStorage to persist a base count if it doesn't exist
+        let baseCount = localStorage.getItem('innovatix_visitor_base');
+        if (!baseCount) {
+            baseCount = Math.floor(Math.random() * (150 - 80 + 1)) + 80;
+            localStorage.setItem('innovatix_visitor_base', baseCount);
+        } else {
+            baseCount = parseInt(baseCount);
+        }
+
+        const updateCount = () => {
+            // Simulate random traffic fluctuations
+            const variation = Math.floor(Math.random() * 5) - 2; // -2 to +2
+            let currentCount = baseCount + variation;
+
+            // Keep it in a reasonable range
+            if (currentCount < 50) currentCount = 50;
+
+            countEl.innerText = currentCount;
+
+            // Random interval for next update
+            const nextUpdate = Math.floor(Math.random() * (8000 - 3000 + 1)) + 3000;
+            setTimeout(updateCount, nextUpdate);
+        };
+
+        updateCount();
+    };
+
+    createVisitorBadge();
 });
+
