@@ -76,38 +76,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const badge = document.createElement('div');
         badge.className = 'visitor-badge glass';
         badge.innerHTML = `
-            <div class="visitor-pulse" title="Live"></div>
-            <span><i class="fas fa-users" style="margin-right: 5px; color: var(--primary);"></i> <span id="visitor-count">124</span> Live Now</span>
+            <div class="visitor-pulse" title="Active Statistics" style="background-color: var(--primary);"></div>
+            <span><i class="fas fa-eye" style="margin-right: 5px; color: var(--primary);"></i> <span id="visitor-count">1,000</span> Total Visits</span>
         `;
         document.body.appendChild(badge);
 
         const countEl = document.getElementById('visitor-count');
 
-        // Use localStorage to persist a base count if it doesn't exist
-        let baseCount = localStorage.getItem('innovatix_visitor_base');
-        if (!baseCount) {
-            baseCount = Math.floor(Math.random() * (150 - 80 + 1)) + 80;
-            localStorage.setItem('innovatix_visitor_base', baseCount);
+        // Use localStorage to persist total visits
+        let totalVisits = localStorage.getItem('innovatix_total_visits');
+
+        if (!totalVisits) {
+            // Initial seed value for total visits
+            totalVisits = Math.floor(Math.random() * (1200 - 800 + 1)) + 800;
         } else {
-            baseCount = parseInt(baseCount);
+            totalVisits = parseInt(totalVisits);
         }
 
-        const updateCount = () => {
-            // Simulate random traffic fluctuations
-            const variation = Math.floor(Math.random() * 5) - 2; // -2 to +2
-            let currentCount = baseCount + variation;
+        // Increment visit only once per session to represent "Total visitors"
+        if (!sessionStorage.getItem('visit_counted')) {
+            totalVisits += 1;
+            localStorage.setItem('innovatix_total_visits', totalVisits);
+            sessionStorage.setItem('visit_counted', 'true');
+        }
 
-            // Keep it in a reasonable range
-            if (currentCount < 50) currentCount = 50;
-
-            countEl.innerText = currentCount;
-
-            // Random interval for next update
-            const nextUpdate = Math.floor(Math.random() * (8000 - 3000 + 1)) + 3000;
-            setTimeout(updateCount, nextUpdate);
-        };
-
-        updateCount();
+        countEl.innerText = totalVisits.toLocaleString();
     };
 
     createVisitorBadge();
