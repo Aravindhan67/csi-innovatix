@@ -15,13 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealElements = document.querySelectorAll('.reveal');
 
     const revealOnScroll = () => {
-        const triggerBottom = window.innerHeight * 0.85;
+        const triggerBottom = window.innerHeight * 0.9;
 
         revealElements.forEach(el => {
             const elTop = el.getBoundingClientRect().top;
 
             if (elTop < triggerBottom) {
                 el.classList.add('active');
+
+                // If it's a timeline item, also notify the parent timeline
+                if (el.classList.contains('timeline-item')) {
+                    el.parentElement.classList.add('reveal-active');
+                }
             }
         });
     };
