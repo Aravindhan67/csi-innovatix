@@ -107,5 +107,39 @@ document.addEventListener('DOMContentLoaded', () => {
             cursorGlow.style.height = '400px';
         });
     });
+
+    // 9. Event Countdown Timer
+    const eventDate = new Date('February 18, 2026 00:00:00').getTime();
+
+    const updateCountdown = () => {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
+
+        if (daysEl) daysEl.innerText = days.toString().padStart(2, '0');
+        if (hoursEl) hoursEl.innerText = hours.toString().padStart(2, '0');
+        if (minutesEl) minutesEl.innerText = minutes.toString().padStart(2, '0');
+        if (secondsEl) secondsEl.innerText = seconds.toString().padStart(2, '0');
+
+        // If the countdown is finished, display some text
+        if (distance < 0) {
+            clearInterval(timerInterval);
+            document.getElementById('countdown').innerHTML = "<h3>Event has Started!</h3>";
+        }
+    };
+
+    const timerInterval = setInterval(updateCountdown, 1000);
+    updateCountdown(); // Run immediately
 });
 

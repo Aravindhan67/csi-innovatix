@@ -112,11 +112,9 @@ ul {
     color: var(--primary);
 }
 
-.btn-primary:hover,
 .btn-outline:hover {
     background: var(--primary);
     color: white;
-    box-shadow: 0 0 25px var(--primary-glow);
 }
 
 /* Institution Header */
@@ -390,22 +388,28 @@ nav.scrolled {
     z-index: 10;
 }
 
-h1.hero-tagline {
-    text-transform: none;
-    /* Keep natural case for the heading */
-    letter-spacing: -2px;
-    padding: 1.5rem 2.5rem;
-    display: block;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+.hero-tagline {
+    color: var(--secondary);
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    display: inline-block;
+    padding: 0.6rem 1.8rem;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 50px;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    backdrop-filter: blur(5px);
+    animation: float 4s ease-in-out infinite;
+    text-shadow: 0 0 10px var(--secondary-glow);
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 8vw, 5rem);
-    margin-bottom: 2.5rem;
-    line-height: 1.1;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    margin-bottom: 2rem;
+    line-height: 1;
     font-weight: 800;
+    letter-spacing: -2px;
 }
 
 .hero p {
@@ -423,6 +427,185 @@ h1.hero-tagline {
     display: flex;
     gap: 2rem;
     justify-content: center;
+}
+
+/* Countdown Styles - Futuristic HUD */
+.countdown-section {
+    padding: 8rem 0;
+    position: relative;
+    z-index: 20;
+}
+
+.countdown-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.countdown-title {
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: var(--primary);
+    margin-bottom: 4rem;
+    position: relative;
+    display: inline-block;
+}
+
+.countdown-title::before,
+.countdown-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--primary));
+    margin-left: -65px;
+}
+
+.countdown-title::after {
+    background: linear-gradient(to left, transparent, var(--primary));
+    right: -65px;
+    margin-left: 0;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.hud-box {
+    position: relative;
+    width: 160px;
+    height: 180px;
+    background: rgba(15, 23, 42, 0.6);
+    /* Slightly darker for better contrast */
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    /* Brighter border */
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    transition: var(--transition);
+}
+
+.hud-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.05), transparent);
+    z-index: 1;
+}
+
+.box-inner {
+    position: relative;
+    z-index: 2;
+    padding: 2.5rem 1rem;
+}
+
+.hud-box span {
+    display: block;
+    font-size: 4rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+    letter-spacing: -2px;
+}
+
+.hud-box p {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--secondary);
+    letter-spacing: 3px;
+    margin: 0 !important;
+}
+
+/* HUD Gauge/Energy Bar */
+.box-gauge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.gauge-fill {
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+    animation: energy-pulse 2s infinite alternate ease-in-out;
+}
+
+.hud-box:hover {
+    transform: translateY(-10px) scale(1.05);
+    border-color: var(--primary);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+}
+
+.hud-box:hover .gauge-fill {
+    background: var(--secondary);
+    box-shadow: 0 0 15px var(--secondary);
+}
+
+@keyframes energy-pulse {
+    0% {
+        opacity: 0.4;
+        transform: scaleX(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .countdown-section {
+        padding: 5rem 0;
+    }
+
+    .countdown {
+        gap: 1rem;
+    }
+
+    .hud-box {
+        width: 130px;
+        height: 150px;
+    }
+
+    .hud-box span {
+        font-size: 3rem;
+    }
+
+    .countdown-title {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hud-box {
+        width: calc(50% - 0.5rem);
+        height: 130px;
+    }
+
+    .hud-box span {
+        font-size: 2.5rem;
+    }
+
+    .box-inner {
+        padding: 1.5rem 1rem;
+    }
 }
 
 /* Animations */
