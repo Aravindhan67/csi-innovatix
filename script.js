@@ -91,20 +91,49 @@ document.addEventListener('DOMContentLoaded', () => {
     cursorGlow.className = 'cursor-glow';
     document.body.appendChild(cursorGlow);
 
+    const cursorRing = document.createElement('div');
+    cursorRing.className = 'cursor-ring';
+    document.body.appendChild(cursorRing);
+
+    let mouseX = 0, mouseY = 0;
+    let ringX = 0, ringY = 0;
+
     window.addEventListener('mousemove', (e) => {
-        cursorGlow.style.left = e.clientX + 'px';
-        cursorGlow.style.top = e.clientY + 'px';
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursorGlow.style.left = mouseX + 'px';
+        cursorGlow.style.top = mouseY + 'px';
     });
 
-    // 8. Button Hover Glow Spark
-    document.querySelectorAll('.btn').forEach(btn => {
-        btn.addEventListener('mouseenter', () => {
+    // Smooth lag for the outer ring
+    const animateRing = () => {
+        const easing = 0.15;
+        ringX += (mouseX - ringX) * easing;
+        ringY += (mouseY - ringY) * easing;
+
+        cursorRing.style.left = ringX + 'px';
+        cursorRing.style.top = ringY + 'px';
+
+        requestAnimationFrame(animateRing);
+    };
+    animateRing();
+
+    // 8. Button & Card Hover Glow Spark
+    const interactiveElements = document.querySelectorAll('.btn, .event-card, .nav-links a');
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
             cursorGlow.style.width = '600px';
             cursorGlow.style.height = '600px';
+            cursorRing.style.width = '80px';
+            cursorRing.style.height = '80px';
+            cursorRing.style.borderColor = 'var(--primary)';
         });
-        btn.addEventListener('mouseleave', () => {
+        el.addEventListener('mouseleave', () => {
             cursorGlow.style.width = '400px';
             cursorGlow.style.height = '400px';
+            cursorRing.style.width = '40px';
+            cursorRing.style.height = '40px';
+            cursorRing.style.borderColor = 'rgba(255, 255, 255, 0.2)';
         });
     });
 });
