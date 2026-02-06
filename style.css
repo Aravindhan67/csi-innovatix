@@ -1028,6 +1028,61 @@ nav.scrolled {
     overflow: hidden;
 }
 
+/* Location Section */
+#location {
+    padding: 8rem 0;
+}
+
+.location-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.venue-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--primary);
+    background: rgba(59, 130, 246, 0.1);
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.info-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: var(--primary);
+}
+
+.info-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 992px) {
+    .location-container {
+        grid-template-columns: 1fr;
+    }
+}
+
 #register {
     padding: 8rem 0;
     background: rgba(15, 23, 42, 0.3);
