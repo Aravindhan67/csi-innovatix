@@ -70,5 +70,42 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // 6. Hero Image Slider Logic
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    const slideInterval = 3000; // 3 seconds
+
+    const nextSlide = () => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    };
+
+    if (slides.length > 0) {
+        setInterval(nextSlide, slideInterval);
+    }
+
+    // 7. Cursor Glow Effect
+    const cursorGlow = document.createElement('div');
+    cursorGlow.className = 'cursor-glow';
+    document.body.appendChild(cursorGlow);
+
+    window.addEventListener('mousemove', (e) => {
+        cursorGlow.style.left = e.clientX + 'px';
+        cursorGlow.style.top = e.clientY + 'px';
+    });
+
+    // 8. Button Hover Glow Spark
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+            cursorGlow.style.width = '600px';
+            cursorGlow.style.height = '600px';
+        });
+        btn.addEventListener('mouseleave', () => {
+            cursorGlow.style.width = '400px';
+            cursorGlow.style.height = '400px';
+        });
+    });
 });
 
