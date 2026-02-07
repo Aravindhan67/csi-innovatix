@@ -784,8 +784,8 @@ nav.scrolled {
 .event-card p,
 .event-card .event-meta,
 .event-card .btn {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
 }
 
 .event-card h3 {
