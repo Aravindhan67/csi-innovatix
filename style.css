@@ -768,7 +768,7 @@ nav.scrolled {
 .events-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 0rem;
+    gap: 2.5rem;
 }
 
 .event-card {
@@ -780,10 +780,10 @@ nav.scrolled {
     flex-direction: column;
 }
 
-/* Ensure text content has padding while banner stays full-width */
 .event-card h3,
 .event-card p,
-.event-card .event-meta {
+.event-card .event-meta,
+.event-card .btn {
     padding-left: 0rem;
     padding-right: 0rem;
 }
@@ -823,7 +823,7 @@ nav.scrolled {
 
 .event-banner {
     width: 100%;
-    height: 850px;
+    height: 600px;
     position: relative;
     overflow: hidden;
     transition: var(--transition);
@@ -1254,7 +1254,7 @@ footer {
     }
 
     .event-card {
-        padding: 0;
+        padding: 2rem;
     }
 
     .inst-text h2 {
@@ -1265,7 +1265,7 @@ footer {
 /* Extra Mobile Optimizations */
 @media (max-width: 480px) {
     .container {
-        padding: 0;
+        padding: 0 1.5rem;
     }
 
     .hero h1 {
