@@ -822,7 +822,7 @@ nav.scrolled {
 }
 
 .event-banner {
-    width: 100%;
+    width: auto;
     height: 600px;
     position: relative;
     overflow: hidden;
