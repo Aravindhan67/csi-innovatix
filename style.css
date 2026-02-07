@@ -822,8 +822,8 @@ nav.scrolled {
 }
 
 .event-banner {
-    width: 100%;
-    height: 700px;
+    width: auto;
+    height: 600px;
     position: relative;
     overflow: hidden;
     transition: var(--transition);
@@ -1254,11 +1254,7 @@ footer {
     }
 
     .event-card {
-        padding: 0;
-    }
-
-    .event-banner {
-        height: 350px !important;
+        padding: 2rem;
     }
 
     .inst-text h2 {
@@ -1269,7 +1265,7 @@ footer {
 /* Extra Mobile Optimizations */
 @media (max-width: 480px) {
     .container {
-        padding: 0 1.25rem;
+        padding: 0 1.5rem;
     }
 
     .hero h1 {
