@@ -10,7 +10,7 @@
     <style>
         .event-hero {
             padding: 150px 0 80px;
-            background: linear-gradient(to bottom, rgba(245, 158, 11, 0.1), transparent);
+            background: linear-gradient(to bottom, rgba(139, 92, 246, 0.1), transparent);
         }
 
         .back-link {
@@ -18,7 +18,7 @@
             align-items: center;
             gap: 0.5rem;
             margin-bottom: 2rem;
-            color: var(--accent);
+            color: var(--primary);
             font-weight: 600;
         }
 
@@ -40,7 +40,7 @@
         }
 
         .rule-list i {
-            color: #d97706;
+            color: var(--primary);
             margin-top: 0.3rem;
         }
 
@@ -86,12 +86,18 @@
     </nav>
 
     <header class="event-hero">
-        <div class="container">
-            <a href="index.html#events" class="back-link"><i class="fas fa-arrow-left"></i> Back to all events</a>
-            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Single View Studio: <span
-                    style="color: var(--accent);">The Figma App Sprint</span></h1>
-            <p style="font-size: 1.25rem; color: var(--text-muted);">A focused UI/UX design challenge where participants
-                build functional mobile interfaces within a single screen.</p>
+        <div class="container" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
+            <div>
+                <a href="index.html#events" class="back-link"><i class="fas fa-arrow-left"></i> Back to all events</a>
+                <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">SINGLE <span style="color: var(--primary);">VIEW
+                        STUDIO</span></h1>
+                <p style="font-size: 1.25rem; color: var(--text-muted);">The Figma App Sprint. Design high-density,
+                    functional mobile app interfaces in one view.</p>
+            </div>
+            <div class="glass" style="padding: 1rem; border-radius: 30px; overflow: hidden;">
+                <img src="single.png" alt="Single View Studio"
+                    style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(255,107,74,0.15);">
+            </div>
         </div>
     </header>
 
@@ -103,15 +109,14 @@
                     where participants build a complete, functional mobile app interface within a single screen—no
                     scrolling, tabs, or navigation allowed.</p>
 
-                <h3 style="margin-bottom: 1rem; color: #d97706;">Design Challenge</h3>
+                <h3 style="margin-bottom: 1rem; color: var(--primary);">Design Goals</h3>
                 <ul class="rule-list">
-                    <li><i class="fas fa-check-circle"></i> <span><strong>Theme Kick-off:</strong> Start with a theme
-                            like a weather dashboard, music player, or wellness tracker.</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span><strong>Constraint (45 mins):</strong> Designers must
-                            craft a pixel-perfect, high-density layout in Figma that delivers all core features at a
-                            glance.</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span><strong>No-Navigation:</strong> The strict one-view
-                            constraint requires balancing elegance with practicality in minimal space.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Information Density:</strong> Perfect the art
+                            of showing more with less space.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>UX Logic:</strong> Ensure a seamless journey
+                            without the need for page transitions.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Visual Hierarchy:</strong> Use color, size,
+                            and weight to guide user attention within the view.</span></li>
                 </ul>
 
                 <h3 style="margin-bottom: 1rem; color: var(--primary); margin-top: 2rem;">Evaluation Criteria</h3>
@@ -124,21 +129,32 @@
                     <h3 style="margin-bottom: 1.5rem;">Event Info</h3>
                     <ul style="margin-bottom: 2rem;">
                         <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
-                            <span style="color: var(--text-muted);">Duration</span>
-                            <span style="font-weight: 600;">60 Minutes</span>
+                            <span style="color: var(--text-muted);">Deadline</span>
+                            <span style="font-weight: 600; color: var(--accent);">FEB 14</span>
                         </li>
                         <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
-                            <span style="color: var(--text-muted);">Team Size</span>
-                            <span style="font-weight: 600;">Individual or 2</span>
+                            <span style="color: var(--text-muted);">Fee (CSI)</span>
+                            <span style="font-weight: 600;">₹120</span>
                         </li>
                         <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
-                            <span style="color: var(--text-muted);">Category</span>
-                            <span style="font-weight: 600;">UI/UX Design</span>
+                            <span style="color: var(--text-muted);">Fee (Non-CSI)</span>
+                            <span style="font-weight: 600;">₹240</span>
                         </li>
                         <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
                             <span style="color: var(--text-muted);">Venue</span>
                             <span style="font-weight: 600; text-align: right;">Sir C.V. Raman Hall, S&H block</span>
                         </li>
+                    </ul>
+
+                    <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--primary);">General Rules</h3>
+                    <ul class="rule-list" style="font-size: 0.9rem; margin-bottom: 2rem;">
+                        <li><i class="fas fa-id-card"></i> <span>College ID card is mandatory for all
+                                participants.</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Participants must report 30 mins before the start
+                                time.</span></li>
+                        <li><i class="fas fa-gavel"></i> <span>Judge's decision will be final and binding.</span></li>
+                        <li><i class="fas fa-coffee"></i> <span>Lunch and Transport are available for all
+                                participants.</span></li>
                     </ul>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScN-F7LNkPz4PzlSObY2XzWUZhD3jcGoya8xzNbK3TWU3Ibaw/viewform?usp=send_form&pli=1&authuser=0"
                         target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center;">Register

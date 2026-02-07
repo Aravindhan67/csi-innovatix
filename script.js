@@ -76,21 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 6. Hero Image Slider Logic
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
-    const slideInterval = 3000; // 3 seconds
-
-    const nextSlide = () => {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
-    };
-
-    if (slides.length > 0) {
-        setInterval(nextSlide, slideInterval);
-    }
-
     // 7. Cursor Glow Effect
     const cursorGlow = document.createElement('div');
     cursorGlow.className = 'cursor-glow';

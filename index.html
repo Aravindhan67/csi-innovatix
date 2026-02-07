@@ -56,17 +56,12 @@
 
     <!-- Hero Section -->
     <header class="hero" id="home">
-        <div class="hero-slider">
-            <div class="slide active" style="background-image: url('kec 1.jpeg');"></div>
-            <div class="slide" style="background-image: url('kec 2.png');"></div>
-            <div class="slide" style="background-image: url('kec 3.jpg');"></div>
-        </div>
+        <div class="hero-bg-animation"></div>
         <div class="container hero-content">
-
-            <h1>Unleash the Future of <span style="color: var(--primary);">Technology</span></h1>
-
-            <p>A flagship technical extravaganza themed around SDG Goals and Quality Education. Join the brightest minds
-                on February 18, 2026.</p>
+            <span class="hero-tagline">A NATIONAL LEVEL SYMPOSIUM</span>
+            <h1>INNOVATIX <span style="color: var(--primary);">'26</span></h1>
+            <p>Join the brightest minds on <strong>February 18, 2026</strong> for a flagship technical extravaganza
+                themed around SDG Goals and Quality Education.</p>
             <div class="hero-btns">
                 <a href="#events" class="btn btn-primary">Explore Events</a>
                 <a href="#about" class="btn btn-outline">Learn More</a>
@@ -179,7 +174,9 @@
             <div class="events-grid">
                 <!-- Event 1 (TECHNICAL THESIS) -->
                 <div class="event-card glass">
-                    <div class="event-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="event-banner banner-thesis">
+                        <img src="tech.png" alt="Technical Thesis">
+                    </div>
                     <h3>Technical Thesis</h3>
                     <p>Showcase a well-crafted paper on impactful tech topics—AI ethics, sustainable systems, or
                         future-ready infrastructure. Visionary presentation meets deep research.</p>
@@ -193,7 +190,9 @@
 
                 <!-- Event 2 (VISUAL LOGIC) -->
                 <div class="event-card glass">
-                    <div class="event-icon"><i class="fas fa-code"></i></div>
+                    <div class="event-banner banner-visual">
+                        <img src="visual.png" alt="Visual Logic">
+                    </div>
                     <h3>Visual Logic</h3>
                     <p>The Pure CSS Game Jam. Build a fully playable, interactive game using only HTML and
                         CSS—absolutely no JavaScript allowed. Push your CSS creativity to the limit!</p>
@@ -207,7 +206,9 @@
 
                 <!-- Event 3 (PIXEL PERFECT) -->
                 <div class="event-card glass">
-                    <div class="event-icon"><i class="fas fa-palette"></i></div>
+                    <div class="event-banner banner-pixel">
+                        <img src="pixel.png" alt="Pixel Perfect">
+                    </div>
                     <h3>Pixel Perfect</h3>
                     <p>The CSS Art Battle. Race to recreate a secret, complex image using only <code>&lt;div&gt;</code>
                         elements and styles. No images, SVGs, or external assets allowed.</p>
@@ -221,7 +222,9 @@
 
                 <!-- Event 4 (SINGLE VIEW STUDIO) -->
                 <div class="event-card glass">
-                    <div class="event-icon"><i class="fab fa-figma"></i></div>
+                    <div class="event-banner banner-studio">
+                        <img src="single.png" alt="Single View Studio">
+                    </div>
                     <h3>Single View Studio</h3>
                     <p>The Figma App Sprint. Build a complete, functional mobile app interface within a single screen—no
                         scrolling or tabs. High-density design at its best.</p>
@@ -235,7 +238,9 @@
 
                 <!-- Event 5 (THE PREDICTIVE PARSER) -->
                 <div class="event-card glass">
-                    <div class="event-icon"><i class="fas fa-brain"></i></div>
+                    <div class="event-banner banner-parser">
+                        <img src="predict.png" alt="Predictive Parser">
+                    </div>
                     <h3>The Predictive Parser</h3>
                     <p>The ultimate code intuition battle. Analyze real code snippets and forecast results without
                         running a single line. Decode logic before the clock runs out!</p>
@@ -319,7 +324,7 @@
                 <p>Kongu Engineering College</p>
             </div>
             <div class="location-container glass">
-            
+
                 <div class="venue-info">
                     <div class="info-item">
                         <i class="fas fa-university"></i>
@@ -350,12 +355,39 @@
             <div class="register-card glass">
                 <i class="fas fa-edit"></i>
                 <h2>Ready to Innovate?</h2>
-                <p style="margin-bottom: 2rem;">Secure your spot now and be part of the change. Registration is open
-                    until February 15, 2026.</p>
-                <!-- Placeholder Google Form Link -->
+                <p style="margin-bottom: 2rem; font-size: 1.1rem;">Secure your spot at INNOVATIX '26. Experience a day
+                    of technical excellence and networking.</p>
+
+                <div class="registration-details"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+                    <div class="fee-box glass" style="padding: 1.5rem;">
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">CSI Member</h4>
+                        <span style="font-size: 1.8rem; font-weight: 800;">₹120</span>
+                    </div>
+                    <div class="fee-box glass" style="padding: 1.5rem;">
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Non-CSI</h4>
+                        <span style="font-size: 1.8rem; font-weight: 800;">₹240</span>
+                    </div>
+                    <div class="deadline-box glass" style="padding: 1.5rem; border: 2px solid var(--accent);">
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Deadline</h4>
+                        <span style="font-size: 1.5rem; font-weight: 800;">FEB 14</span>
+                    </div>
+                </div>
+
+                <div class="perks-list"
+                    style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 3rem; flex-wrap: wrap;">
+                    <div class="perk-item"><i class="fas fa-trophy" style="color: #FFD700;"></i> Exciting Cash Prizes
+                    </div>
+                    <div class="perk-item"><i class="fas fa-utensils" style="color: var(--primary);"></i> Lunch Provided
+                    </div>
+                    <div class="perk-item"><i class="fas fa-bus" style="color: var(--primary);"></i> Transport Available
+                    </div>
+                </div>
+
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScN-F7LNkPz4PzlSObY2XzWUZhD3jcGoya8xzNbK3TWU3Ibaw/viewform?usp=send_form&pli=1&authuser=0"
-                    target="_blank" class="btn btn-primary" style="padding: 1.2rem 3rem; font-size: 1.2rem;">Register
-                    via Google Form</a>
+                    target="_blank" class="btn btn-primary"
+                    style="padding: 1.2rem 3rem; font-size: 1.2rem; box-shadow: 0 10px 20px var(--primary-glow);">Register
+                    Now</a>
 
                 <div class="contact-queries reveal">
                     <h3>For Queries</h3>

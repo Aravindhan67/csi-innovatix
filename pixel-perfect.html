@@ -10,7 +10,7 @@
     <style>
         .event-hero {
             padding: 150px 0 80px;
-            background: linear-gradient(to bottom, rgba(16, 185, 129, 0.1), transparent);
+            background: linear-gradient(to bottom, rgba(139, 92, 246, 0.1), transparent);
         }
 
         .back-link {
@@ -18,7 +18,7 @@
             align-items: center;
             gap: 0.5rem;
             margin-bottom: 2rem;
-            color: var(--secondary);
+            color: var(--primary);
             font-weight: 600;
         }
 
@@ -86,12 +86,18 @@
     </nav>
 
     <header class="event-hero">
-        <div class="container">
-            <a href="index.html#events" class="back-link"><i class="fas fa-arrow-left"></i> Back to all events</a>
-            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Pixel Perfect: <span
-                    style="color: var(--secondary);">The CSS Art Battle</span></h1>
-            <p style="font-size: 1.25rem; color: var(--text-muted);">A fast-paced creative showdown where teams race to
-                recreate complex images using only HTML & CSS.</p>
+        <div class="container" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
+            <div>
+                <a href="index.html#events" class="back-link"><i class="fas fa-arrow-left"></i> Back to all events</a>
+                <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">PIXEL <span
+                        style="color: var(--primary);">PERFECT</span></h1>
+                <p style="font-size: 1.25rem; color: var(--text-muted);">The CSS Art Battle. Recreate complex imagery
+                    using only DIVs and raw styles.</p>
+            </div>
+            <div class="glass" style="padding: 1rem; border-radius: 30px; overflow: hidden;">
+                <img src="pixel.png" alt="Pixel Perfect"
+                    style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(255,107,74,0.15);">
+            </div>
         </div>
     </header>
 
@@ -103,14 +109,14 @@
                     recreate a secret, complex image—such as a famous painting, landmark, or brand logo—using only HTML
                     and CSS, with absolutely no images, SVGs, or external assets allowed.</p>
 
-                <h3 style="margin-bottom: 1rem; color: var(--primary);">Competition Rules</h3>
+                <h3 style="margin-bottom: 1rem; color: var(--primary);">Battle Rules</h3>
                 <ul class="rule-list">
-                    <li><i class="fas fa-check-circle"></i> <span><strong>Planning (5 mins):</strong> Teams have a short
-                            period to strategize their approach after the target image is revealed.</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span><strong>Execution (45 mins):</strong> Craft your
-                            visual replica entirely from <code>&lt;div&gt;</code> elements and styles.</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span><strong>Techniques:</strong> Leverage gradients,
-                            shadows, clipping, and positioning to match the target as closely as possible.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>No Externals:</strong> Absolutely no images,
+                            SVGs, or external libraries. Pure CSS only.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Code Efficiency:</strong> Recreate the image
+                            with the fewest possible lines of CSS.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>One Screen:</strong> All code must reside in a
+                            single file provided during the battle.</span></li>
                 </ul>
 
                 <h3 style="margin-bottom: 1rem; color: var(--accent); margin-top: 2rem;">Judging Quality</h3>
@@ -123,21 +129,32 @@
                     <h3 style="margin-bottom: 1.5rem;">Event Info</h3>
                     <ul style="margin-bottom: 2rem;">
                         <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
-                            <span style="color: var(--text-muted);">Duration</span>
-                            <span style="font-weight: 600;">60 Minutes</span>
+                            <span style="color: var(--text-muted);">Deadline</span>
+                            <span style="font-weight: 600; color: var(--accent);">FEB 14</span>
                         </li>
                         <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
-                            <span style="color: var(--text-muted);">Team Size</span>
-                            <span style="font-weight: 600;">Individual or 2</span>
+                            <span style="color: var(--text-muted);">Fee (CSI)</span>
+                            <span style="font-weight: 600;">₹120</span>
                         </li>
                         <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
-                            <span style="color: var(--text-muted);">Category</span>
-                            <span style="font-weight: 600;">Creative Coding</span>
+                            <span style="color: var(--text-muted);">Fee (Non-CSI)</span>
+                            <span style="font-weight: 600;">₹240</span>
                         </li>
                         <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
                             <span style="color: var(--text-muted);">Venue</span>
                             <span style="font-weight: 600; text-align: right;">Sir C.V. Raman Hall, S&H block</span>
                         </li>
+                    </ul>
+
+                    <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--primary);">General Rules</h3>
+                    <ul class="rule-list" style="font-size: 0.9rem; margin-bottom: 2rem;">
+                        <li><i class="fas fa-id-card"></i> <span>College ID card is mandatory for all
+                                participants.</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Participants must report 30 mins before the start
+                                time.</span></li>
+                        <li><i class="fas fa-gavel"></i> <span>Judge's decision will be final and binding.</span></li>
+                        <li><i class="fas fa-coffee"></i> <span>Lunch and Transport are available for all
+                                participants.</span></li>
                     </ul>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScN-F7LNkPz4PzlSObY2XzWUZhD3jcGoya8xzNbK3TWU3Ibaw/viewform?usp=send_form&pli=1&authuser=0"
                         target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center;">Register

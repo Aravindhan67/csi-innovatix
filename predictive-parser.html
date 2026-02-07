@@ -10,7 +10,7 @@
     <style>
         .event-hero {
             padding: 150px 0 80px;
-            background: linear-gradient(to bottom, rgba(239, 68, 68, 0.1), transparent);
+            background: linear-gradient(to bottom, rgba(139, 92, 246, 0.1), transparent);
         }
 
         .back-link {
@@ -18,7 +18,7 @@
             align-items: center;
             gap: 0.5rem;
             margin-bottom: 2rem;
-            color: #ef4444;
+            color: var(--primary);
             font-weight: 600;
         }
 
@@ -40,7 +40,7 @@
         }
 
         .rule-list i {
-            color: #ef4444;
+            color: var(--primary);
             margin-top: 0.3rem;
         }
 
@@ -86,12 +86,18 @@
     </nav>
 
     <header class="event-hero">
-        <div class="container">
-            <a href="index.html#events" class="back-link"><i class="fas fa-arrow-left"></i> Back to all events</a>
-            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">The <span style="color: #ef4444;">Predictive</span>
-                Parser</h1>
-            <p style="font-size: 1.25rem; color: var(--text-muted);">The ultimate battle of wits and code intuition.
-                Decode logic before the clock runs out.</p>
+        <div class="container" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
+            <div>
+                <a href="index.html#events" class="back-link"><i class="fas fa-arrow-left"></i> Back to all events</a>
+                <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">PREDICTIVE <span
+                        style="color: var(--primary);">PARSER</span></h1>
+                <p style="font-size: 1.25rem; color: var(--text-muted);">The Ultimate Code Intuition Battle. Predict
+                    output, trace logic, and beat the compiler.</p>
+            </div>
+            <div class="glass" style="padding: 1rem; border-radius: 30px; overflow: hidden;">
+                <img src="predict.png" alt="Predictive Parser"
+                    style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(255,107,74,0.15);">
+            </div>
         </div>
     </header>
 
@@ -103,13 +109,14 @@
                     Predictive Parser" is a two-stage mental sprint where your ability to read and understand code
                     without a compiler is put to the test.</p>
 
-                <h3 style="margin-bottom: 1rem; color: #ef4444;">Event Stages</h3>
+                <h3 style="margin-bottom: 1rem; color: var(--primary);">Challenge Rounds</h3>
                 <ul class="rule-list">
-                    <li><i class="fas fa-check-circle"></i> <span><strong>Round 1: Rapid-Fire Quiz:</strong> Tackle tech
-                            trivia in an intense online quiz format.</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span><strong>Round 2: Output Prediction:</strong> Top
-                            performers advance to analyze real code snippets and forecast results—without running a
-                            single line.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Snippet Siege:</strong> Forecast the output
+                            for rapid-fire code segments correctly.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Logic Loop:</strong> Trace the path of complex
+                            state changes and nested conditions.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span><strong>Error Hunt:</strong> Spot hidden syntax and
+                            logical bugs without needing a debugger.</span></li>
                     <li><i class="fas fa-check-circle"></i> <span><strong>Under Pressure:</strong> It's not just what
                             you know, but how you think under the ticking clock.</span></li>
                 </ul>
@@ -123,21 +130,32 @@
                     <h3 style="margin-bottom: 1.5rem;">Event Info</h3>
                     <ul style="margin-bottom: 2rem;">
                         <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
-                            <span style="color: var(--text-muted);">Duration</span>
-                            <span style="font-weight: 600;">2 Rounds</span>
+                            <span style="color: var(--text-muted);">Deadline</span>
+                            <span style="font-weight: 600; color: var(--accent);">FEB 14</span>
                         </li>
                         <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
-                            <span style="color: var(--text-muted);">Team Size</span>
-                            <span style="font-weight: 600;">Individual</span>
+                            <span style="color: var(--text-muted);">Fee (CSI)</span>
+                            <span style="font-weight: 600;">₹120</span>
                         </li>
                         <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
-                            <span style="color: var(--text-muted);">Category</span>
-                            <span style="font-weight: 600;">Logic & Trivia</span>
+                            <span style="color: var(--text-muted);">Fee (Non-CSI)</span>
+                            <span style="font-weight: 600;">₹240</span>
                         </li>
                         <li style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
                             <span style="color: var(--text-muted);">Venue</span>
                             <span style="font-weight: 600; text-align: right;">Sir C.V. Raman Hall, S&H block</span>
                         </li>
+                    </ul>
+
+                    <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--primary);">General Rules</h3>
+                    <ul class="rule-list" style="font-size: 0.9rem; margin-bottom: 2rem;">
+                        <li><i class="fas fa-id-card"></i> <span>College ID card is mandatory for all
+                                participants.</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Participants must report 30 mins before the start
+                                time.</span></li>
+                        <li><i class="fas fa-gavel"></i> <span>Judge's decision will be final and binding.</span></li>
+                        <li><i class="fas fa-coffee"></i> <span>Lunch and Transport are available for all
+                                participants.</span></li>
                     </ul>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScN-F7LNkPz4PzlSObY2XzWUZhD3jcGoya8xzNbK3TWU3Ibaw/viewform?usp=send_form&pli=1&authuser=0"
                         target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center;">Register
