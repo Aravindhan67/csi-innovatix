@@ -822,11 +822,17 @@ nav.scrolled {
 }
 
 .event-banner {
-    width: auto;
+    width: 100%;
     height: 600px;
     position: relative;
     overflow: hidden;
     transition: var(--transition);
+}
+
+@media (max-width: 768px) {
+    .event-banner {
+        height: auto;
+    }
 }
 
 .event-banner img {
@@ -834,7 +840,16 @@ nav.scrolled {
     height: 100%;
     object-fit: cover;
     transition: transform 0.8s cubic-bezier(0.2, 0, 0.2, 1);
+    display: block;
 }
+
+@media (max-width: 768px) {
+    .event-banner img {
+        height: auto;
+        object-fit: initial;
+    }
+}
+
 
 .event-card:hover .event-banner img {
     transform: scale(1.15);
