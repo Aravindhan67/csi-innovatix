@@ -160,7 +160,7 @@ ul {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 2rem;
 }
 
 /* Glassmorphism Utility */
@@ -1254,7 +1254,11 @@ footer {
     }
 
     .event-card {
-        padding: 2rem;
+        padding: 0;
+    }
+
+    .event-banner {
+        height: 350px !important;
     }
 
     .inst-text h2 {
@@ -1265,7 +1269,7 @@ footer {
 /* Extra Mobile Optimizations */
 @media (max-width: 480px) {
     .container {
-        padding: 0 1.5rem;
+        padding: 0 1.25rem;
     }
 
     .hero h1 {
