@@ -1418,3 +1418,33 @@ footer {
         max-width: 1400px;
     }
 }
+/* Transport Section Styling */
+.transport-card-section { padding: 80px 0; text-align: center; background: transparent; }
+.transport-card { background: var(--glass-grad); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 30px; padding: 2.5rem; display: inline-flex; align-items: center; gap: 2rem; box-shadow: var(--shadow-glow); transition: var(--transition); text-align: left; max-width: fit-content; margin: 0 auto; }
+.transport-card:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: 0 20px 40px var(--primary-glow); }
+.bus-icon-wrap { font-size: 3rem; color: var(--primary); animation: bus-slide 3s ease-in-out infinite; filter: drop-shadow(0 0 10px var(--primary-glow)); }
+@keyframes bus-slide { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(15px); } }
+.transport-info-text { display: flex; flex-direction: column; gap: 0.5rem; }
+.transport-label { font-weight: 800; color: var(--primary); font-size: 1.4rem; text-transform: uppercase; letter-spacing: 1px; }
+.transport-times { font-size: 1.1rem; color: var(--text-main); line-height: 1.6; }
+.transport-times b { color: var(--accent); }
+@media (max-width: 768px) { .transport-card { flex-direction: column; padding: 2rem; text-align: center; gap: 1.5rem; width: 90%; } }
+
+
+/* Advanced Route Visualization */
+.route-container { position: relative; width: 100%; min-width: 300px; padding: 20px 0; margin: 10px 0; }
+.route-line { position: absolute; top: 50%; left: 5%; width: 90%; height: 80px; border: none; border-top: 3px dotted var(--primary); border-radius: 50%; opacity: 0.5; transform: translateY(-40px); z-index: 1; }
+.bus-traveler { position: absolute; top: 10%; left: 0; font-size: 2.2rem; color: var(--primary); animation: travel-loop 10s linear infinite; filter: drop-shadow(0 0 10px var(--primary-glow)); z-index: 2; }
+@keyframes travel-loop { 0% { left: 5%; top: 50%; transform: scaleX(1); } 25% { left: 30%; top: 20%; transform: scaleX(1); } 45% { left: 85%; top: 50%; transform: scaleX(1); } 50% { left: 85%; top: 50%; transform: scaleX(-1); } 75% { left: 30%; top: 20%; transform: scaleX(-1); } 95% { left: 5%; top: 50%; transform: scaleX(-1); } 100% { left: 5%; top: 50%; transform: scaleX(1); } }
+.route-labels { display: flex; justify-content: space-between; width: 100%; margin-top: 45px; font-weight: 700; font-size: 0.9rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
+.route-labels span { background: var(--bg-main); padding: 2px 8px; border-radius: 8px; z-index: 3; }
+
+
+
+/* Curved Route Visualization */
+.curved-route-container { position: relative; width: 100%; height: 220px; margin: 0 auto; }
+.route-svg { width: 100%; height: 200px; display: block; }
+.bus-on-path { position: absolute; top: 0; left: 0; font-size: 2rem; color: var(--accent); filter: drop-shadow(0 0 8px var(--primary-glow)); animation: curvedTravel 12s ease-in-out infinite; }
+@keyframes curvedTravel { 0% { offset-path: path('M 50 150 Q 150 150, 200 100 T 400 100 Q 500 100, 550 50'); offset-distance: 0%; } 50% { offset-distance: 100%; } 51% { transform: scaleX(-1); } 100% { offset-distance: 0%; transform: scaleX(-1); } }
+@supports not (offset-path: path('M 0 0')) { @keyframes curvedTravel { 0% { left: 30px; top: 130px; } 25% { left: 200px; top: 80px; } 50% { left: 520px; top: 30px; } 75% { left: 200px; top: 80px; } 100% { left: 30px; top: 130px; } } }
+

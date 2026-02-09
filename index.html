@@ -380,12 +380,6 @@
                     </div>
                     <div class="perk-item"><i class="fas fa-utensils" style="color: var(--primary);"></i> Lunch Provided
                     </div>
-                    <div class="perk-item"
-                        style="display: flex; flex-direction: column; align-items: center; gap: 0.2rem;">
-                        <span><i class="fas fa-bus" style="color: var(--primary);"></i> Transport Available</span>
-                        <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">Perundurai ⇄ KEC
-                            (8:45 AM | 4:15-6:30 PM)</span>
-                    </div>
                 </div>
 
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScN-F7LNkPz4PzlSObY2XzWUZhD3jcGoya8xzNbK3TWU3Ibaw/viewform?usp=send_form&pli=1&authuser=0"
@@ -418,22 +412,44 @@
     </section>
 
     <!-- Transport Details -->
-    <div class="transport-card-section reveal">
+    <section class="transport-card-section reveal">
         <div class="container" style="display: flex; justify-content: center;">
-            <div class="transport-card">
-                <div class="bus-icon-wrap">
-                    <i class="fas fa-bus"></i>
-                </div>
+            <div class="transport-card" style="width: 100%; max-width: 700px; display: block; padding: 3rem 2rem;">
                 <div class="transport-info-text">
-                    <span class="transport-label">Transport Details</span>
-                    <span class="transport-times">
-                        <b>Perundurai Bus Stand ⇄ KEC</b> <br>
+                    <span class="transport-label"
+                        style="display: block; text-align: center; margin-bottom: 2rem;">Transport Route</span>
+
+                    <div class="curved-route-container">
+                        <svg class="route-svg" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Curved Path -->
+                            <path id="busRoute" d="M 50 150 Q 150 150, 200 100 T 400 100 Q 500 100, 550 50" fill="none"
+                                stroke="var(--primary)" stroke-width="4" stroke-dasharray="10,10" opacity="0.6" />
+
+                            <!-- Start Station -->
+                            <circle cx="50" cy="150" r="8" fill="var(--accent)" stroke="white" stroke-width="2" />
+                            <text x="50" y="180" text-anchor="middle" fill="var(--primary)" font-size="12"
+                                font-weight="700">Perundurai</text>
+
+                            <!-- End Station -->
+                            <circle cx="550" cy="50" r="8" fill="var(--accent)" stroke="white" stroke-width="2" />
+                            <text x="550" y="35" text-anchor="middle" fill="var(--primary)" font-size="12"
+                                font-weight="700">KEC</text>
+                        </svg>
+
+                        <!-- Animated Bus -->
+                        <div class="bus-on-path">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                    </div>
+
+                    <span class="transport-times"
+                        style="display: block; text-align: center; margin-top: 2.5rem; font-size: 1.1rem;">
                         Morning: <b>8:45 AM</b> | Evening: <b>4:15 PM - 6:30 PM</b>
                     </span>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer>
