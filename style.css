@@ -1655,9 +1655,12 @@ footer {
 /* Curve Animation */
 .curve-route-container {
     position: relative;
-    width: 100%;
+    width: 500px;
+    /* Fixed width matching Desktop SVG viewBox */
     height: 120px;
     margin-bottom: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .curve-svg {
@@ -1667,6 +1670,10 @@ footer {
     top: 0;
     left: 0;
     overflow: visible;
+}
+
+.mobile-svg {
+    display: none;
 }
 
 .curve-path-dashed {
@@ -1683,6 +1690,7 @@ footer {
     left: 0;
     font-size: 1.8rem;
     color: var(--accent);
+    /* Desktop Path */
     offset-path: path("M 30 60 Q 250 110 470 30");
     offset-rotate: auto;
     animation: curve-travel 8s linear infinite;
@@ -1760,50 +1768,44 @@ footer {
         font-size: 2.5rem;
     }
 
+    /* On tablet/mobile, switch to smaller fixed width container */
     .curve-route-container {
-        height: 80px;
+        width: 300px;
+        height: 100px;
     }
 
+    /* Switch SVGs */
+    .desktop-svg {
+        display: none;
+    }
+
+    .mobile-svg {
+        display: block;
+    }
+
+    /* Switch Bus Path */
+    .bus-on-curve {
+        offset-path: path("M 10 50 Q 150 90 290 20");
+    }
+
+    /* Markers for 300px width path */
+    /* Start M10 -> left ~0px */
     .start-marker {
+        left: -5px;
         top: 30px;
-        left: 0;
     }
 
+    /* End 290 -> right ~0px */
     .end-marker {
+        right: -5px;
         top: 0;
-        right: 0;
     }
 }
 
 /* Mobile Specific Animation Adjustment */
 @media (max-width: 500px) {
 
-    /* Switch to Mobile SVG Path */
-    .desktop-curve {
-        display: none;
-    }
-
-    .mobile-curve {
-        display: block !important;
-    }
-
-
-    /* Update Bus Path to match Mobile Curve */
-    .bus-on-curve {
-        offset-path: path("M 10 50 Q 150 90 290 20");
-    }
-
     .transport-card-clean {
         padding: 1.5rem;
-    }
-
-    .start-marker {
-        left: -5px;
-        top: 25px;
-    }
-
-    .end-marker {
-        right: -5px;
-        top: 0;
     }
 }

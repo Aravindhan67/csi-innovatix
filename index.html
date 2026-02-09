@@ -427,12 +427,14 @@
 
                     <!-- Gentle Curve Animated Route -->
                     <div class="curve-route-container">
-                        <svg class="curve-svg" viewBox="0 0 500 120" preserveAspectRatio="none">
-                            <!-- Desktop Path (Default) -->
-                            <path class="curve-path-dashed desktop-curve" d="M 30 60 Q 250 110 470 30" />
-                            <!-- Mobile Path (Hidden by default) -->
-                            <path class="curve-path-dashed mobile-curve" d="M 10 50 Q 150 90 290 20"
-                                style="display: none;" />
+                        <!-- Desktop SVG -->
+                        <svg class="curve-svg desktop-svg" viewBox="0 0 500 120" preserveAspectRatio="none">
+                            <path class="curve-path-dashed" d="M 30 60 Q 250 110 470 30" />
+                        </svg>
+
+                        <!-- Mobile SVG -->
+                        <svg class="curve-svg mobile-svg" viewBox="0 0 300 100" preserveAspectRatio="none">
+                            <path class="curve-path-dashed" d="M 10 50 Q 150 90 290 20" />
                         </svg>
 
                         <!-- Moving Bus -->
