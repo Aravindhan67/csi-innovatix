@@ -414,37 +414,43 @@
     <!-- Transport Details -->
     <section class="transport-card-section reveal">
         <div class="container" style="display: flex; justify-content: center;">
-            <div class="transport-card" style="width: 100%; max-width: 700px; display: block; padding: 3rem 2rem;">
-                <div class="transport-info-text">
-                    <span class="transport-label"
-                        style="display: block; text-align: center; margin-bottom: 2rem;">Transport Route</span>
+            <div class="transport-card-clean">
+                <!-- Left Icon -->
+                <div class="transport-icon-container">
+                    <i class="fas fa-bus"></i>
+                </div>
 
-                    <div class="curved-route-container">
-                        <svg class="route-svg" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Curved Path -->
-                            <path id="busRoute" d="M 50 150 Q 150 150, 200 100 T 400 100 Q 500 100, 550 50" fill="none"
-                                stroke="var(--primary)" stroke-width="4" stroke-dasharray="10,10" opacity="0.6" />
+                <!-- Right Details -->
+                <div class="transport-details">
+                    <span class="transport-label">Transport Details</span>
+                    <h3 class="transport-route-title">Perundurai Bus Stand ⇄ KEC</h3>
 
-                            <!-- Start Station -->
-                            <circle cx="50" cy="150" r="8" fill="var(--accent)" stroke="white" stroke-width="2" />
-                            <text x="50" y="180" text-anchor="middle" fill="var(--primary)" font-size="12"
-                                font-weight="700">Perundurai</text>
-
-                            <!-- End Station -->
-                            <circle cx="550" cy="50" r="8" fill="var(--accent)" stroke="white" stroke-width="2" />
-                            <text x="550" y="35" text-anchor="middle" fill="var(--primary)" font-size="12"
-                                font-weight="700">KEC</text>
+                    <!-- Gentle Curve Animated Route -->
+                    <div class="curve-route-container">
+                        <svg class="curve-svg" viewBox="0 0 500 120" preserveAspectRatio="none">
+                            <!-- Desktop Path (Default) -->
+                            <path class="curve-path-dashed desktop-curve" d="M 30 60 Q 250 110 470 30" />
+                            <!-- Mobile Path (Hidden by default) -->
+                            <path class="curve-path-dashed mobile-curve" d="M 10 50 Q 150 90 290 20"
+                                style="display: none;" />
                         </svg>
 
-                        <!-- Animated Bus -->
-                        <div class="bus-on-path">
+                        <!-- Moving Bus -->
+                        <div class="bus-on-curve">
                             <i class="fas fa-bus"></i>
+                        </div>
+
+                        <!-- Markers -->
+                        <div class="curve-marker start-marker">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="curve-marker end-marker">
+                            <i class="fas fa-university"></i>
                         </div>
                     </div>
 
-                    <span class="transport-times"
-                        style="display: block; text-align: center; margin-top: 2.5rem; font-size: 1.1rem;">
-                        Morning: <b>8:45 AM</b> | Evening: <b>4:15 PM - 6:30 PM</b>
+                    <span class="transport-timings">
+                        Morning: <b>7:00AM - 8:45 AM</b> | Evening: <b>4:15 PM - 6:30 PM</b>
                     </span>
                 </div>
             </div>
